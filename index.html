@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratyay Koley - Resume</title>
+    <title>Pratyay Koley - Animated Resume</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -20,12 +20,26 @@
             margin: 0 auto;
             padding: 20px;
             background-color: var(--background-color);
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
         }
         .container {
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             border-radius: 8px;
             overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideUp 1s ease-out 0.5s forwards;
+        }
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         .header {
             background-color: var(--primary-color);
@@ -37,6 +51,11 @@
             margin: 0;
             font-size: 2.5em;
             letter-spacing: 2px;
+            animation: scaleIn 0.5s ease-out 1.5s both;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         .contact-info {
             background-color: var(--secondary-color);
@@ -44,6 +63,11 @@
             padding: 15px;
             text-align: center;
             font-size: 0.9em;
+            transform: translateY(-100%);
+            animation: slideDown 0.5s ease-out 2s forwards;
+        }
+        @keyframes slideDown {
+            to { transform: translateY(0); }
         }
         .main-content {
             display: grid;
@@ -53,6 +77,11 @@
         }
         .section {
             margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInSection 0.5s ease-out forwards;
+        }
+        @keyframes fadeInSection {
+            to { opacity: 1; }
         }
         .section h2 {
             color: var(--secondary-color);
@@ -62,6 +91,11 @@
         }
         .education, .project {
             margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInItem 0.5s ease-out forwards;
+        }
+        @keyframes fadeInItem {
+            to { opacity: 1; }
         }
         .education h3, .project h3 {
             color: var(--primary-color);
@@ -81,6 +115,11 @@
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.9em;
+            opacity: 0;
+            animation: fadeInSkill 0.3s ease-out forwards;
+        }
+        @keyframes fadeInSkill {
+            to { opacity: 1; }
         }
         .strengths {
             display: grid;
@@ -94,6 +133,13 @@
             border-radius: 5px;
             text-align: center;
             font-weight: bold;
+            opacity: 0;
+            animation: pulseIn 0.5s ease-out forwards;
+        }
+        @keyframes pulseIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
         }
         .achievements {
             background-color: var(--primary-color);
@@ -101,6 +147,12 @@
             padding: 20px;
             border-radius: 5px;
             margin-top: 30px;
+            opacity: 0;
+            animation: slideInLeft 0.5s ease-out 3s forwards;
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
         @media (max-width: 768px) {
             .main-content {
@@ -120,44 +172,44 @@
         
         <div class="main-content">
             <div class="left-column">
-                <div class="section">
+                <div class="section" style="animation-delay: 2.5s;">
                     <h2>SKILLS</h2>
                     <div class="skills">
-                        <span class="skill">C</span>
-                        <span class="skill">C++</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">JavaScript</span>
-                        <span class="skill">XML</span>
-                        <span class="skill">HTML</span>
-                        <span class="skill">CSS</span>
-                        <span class="skill">Bootstrap</span>
-                        <span class="skill">Tailwind CSS</span>
-                        <span class="skill">React.js</span>
-                        <span class="skill">Express.js</span>
-                        <span class="skill">MongoDB</span>
-                        <span class="skill">PostgreSQL</span>
-                        <span class="skill">Git</span>
-                        <span class="skill">VS Code</span>
-                        <span class="skill">Android Studio</span>
-                        <span class="skill">Google Colab</span>
+                        <span class="skill" style="animation-delay: 2.6s;">C</span>
+                        <span class="skill" style="animation-delay: 2.7s;">C++</span>
+                        <span class="skill" style="animation-delay: 2.8s;">Python</span>
+                        <span class="skill" style="animation-delay: 2.9s;">JavaScript</span>
+                        <span class="skill" style="animation-delay: 3.0s;">XML</span>
+                        <span class="skill" style="animation-delay: 3.1s;">HTML</span>
+                        <span class="skill" style="animation-delay: 3.2s;">CSS</span>
+                        <span class="skill" style="animation-delay: 3.3s;">Bootstrap</span>
+                        <span class="skill" style="animation-delay: 3.4s;">Tailwind CSS</span>
+                        <span class="skill" style="animation-delay: 3.5s;">React.js</span>
+                        <span class="skill" style="animation-delay: 3.6s;">Express.js</span>
+                        <span class="skill" style="animation-delay: 3.7s;">MongoDB</span>
+                        <span class="skill" style="animation-delay: 3.8s;">PostgreSQL</span>
+                        <span class="skill" style="animation-delay: 3.9s;">Git</span>
+                        <span class="skill" style="animation-delay: 4.0s;">VS Code</span>
+                        <span class="skill" style="animation-delay: 4.1s;">Android Studio</span>
+                        <span class="skill" style="animation-delay: 4.2s;">Google Colab</span>
                     </div>
                 </div>
                 
-                <div class="section">
+                <div class="section" style="animation-delay: 4.3s;">
                     <h2>EDUCATION</h2>
-                    <div class="education">
+                    <div class="education" style="animation-delay: 4.4s;">
                         <h3>Bachelor of Engineering (B.E)</h3>
                         <p>Computer Science & Engineering</p>
                         <p>Fr. Conceicao Rodrigues College of Engineering</p>
                         <p>CGPA: 9.86/10 | 2022-2026</p>
                     </div>
-                    <div class="education">
+                    <div class="education" style="animation-delay: 4.5s;">
                         <h3>Senior Secondary (XII)</h3>
                         <p>Maharashtra State Board</p>
                         <p>Annasaheb Vartak College, Vasai (W)</p>
                         <p>Percentage: 85.50% | 2022</p>
                     </div>
-                    <div class="education">
+                    <div class="education" style="animation-delay: 4.6s;">
                         <h3>Secondary (X)</h3>
                         <p>Maharashtra State Board</p>
                         <p>Infant Jesus High School, Nallasopara (E)</p>
@@ -165,44 +217,44 @@
                     </div>
                 </div>
                 
-                <div class="section">
+                <div class="section" style="animation-delay: 4.7s;">
                     <h2>STRENGTHS</h2>
                     <div class="strengths">
-                        <div class="strength">Fast Learner</div>
-                        <div class="strength">Adaptable</div>
-                        <div class="strength">Collaborative</div>
-                        <div class="strength">Curious</div>
+                        <div class="strength" style="animation-delay: 4.8s;">Fast Learner</div>
+                        <div class="strength" style="animation-delay: 4.9s;">Adaptable</div>
+                        <div class="strength" style="animation-delay: 5.0s;">Collaborative</div>
+                        <div class="strength" style="animation-delay: 5.1s;">Curious</div>
                     </div>
                 </div>
             </div>
             
             <div class="right-column">
-                <div class="section">
+                <div class="section" style="animation-delay: 5.2s;">
                     <h2>CAREER OBJECTIVE</h2>
                     <p>Full-stack Web Developer proficient in HTML, CSS, JavaScript, and the MERN stack, with programming expertise in C, C++, and Python. Skilled in Computer Fundamentals, with a strong ability to work independently or collaboratively.</p>
                 </div>
                 
-                <div class="section">
+                <div class="section" style="animation-delay: 5.3s;">
                     <h2>PROJECTS</h2>
-                    <div class="project">
+                    <div class="project" style="animation-delay: 5.4s;">
                         <h3>CampusConnect</h3>
                         <p><strong>Duration:</strong> Jul 2023 - May 2024</p>
                         <p>Developed Campus Connect, a comprehensive app designed to bridge the gap in academic and professional networking, offering a space for students, alumni, and academics to connect, collaborate, and grow.</p>
                         <p><strong>Tech Stack:</strong> Android Studio, XML, Firebase, Kotlin.</p>
                     </div>
-                    <div class="project">
+                    <div class="project" style="animation-delay: 5.5s;">
                         <h3>GutFood</h3>
                         <p><strong>Duration:</strong> Oct 2024</p>
                         <p>Developed GutFood, a website that checks food safety, identifies ingredients, and includes a chatbot to inform users about potential health risks. Developed its frontend and its connection with Django.</p>
                         <p><strong>Tech Stack:</strong> Django, React.js, ML, GenAI (Gemini)</p>
                     </div>
-                    <div class="project">
+                    <div class="project" style="animation-delay: 5.6s;">
                         <h3>Instagram Clone</h3>
                         <p><strong>Duration:</strong> Jun 2024 - Present</p>
                         <p>Built an Instagram Clone with JWT authentication, Websockets and Multer. Login Authentication using JWT Tokenization, messaging handling using Websockets and post uploading using Multer.</p>
                         <p><strong>Tech Stack:</strong> MERN</p>
                     </div>
-                    <div class="project">
+                    <div class="project" style="animation-delay: 5.7s;">
                         <h3>Course Scheduling System</h3>
                         <p><strong>Duration:</strong> Sep 2024 - Nov 2024</p>
                         <p>An intuitive and efficient platform to manage and visualize course schedules. Designed for students, educators, and institutions to streamline the process of creating and organizing class timetables.</p>
